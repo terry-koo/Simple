@@ -75,6 +75,13 @@ jobs:
         # 빌드 및 아카이브
         run: |
           xcodebuild clean archive -project Simple.xcodeproj -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE
+          
+      - name: Print project directory and files
+        run: |
+          echo "Project directory: $(pwd)"
+          echo "Files in project directory:"
+          ls -al    
+          
       - name: Export app
         # export 를 통해 ipa 파일 만듦
         run: |
