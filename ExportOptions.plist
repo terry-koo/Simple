@@ -14,7 +14,7 @@
 		<string>SimpleGithubAction</string>
 	</dict>
 	<key>signingCertificate</key>
-	<string>Apple Distribution</string>
+	<string>210626E7E7D55B4CAAFCEA9933FC9B1655278645</string>
 	<key>signingStyle</key>
 	<string>manual</string>
 	<key>stripSwiftSymbols</key>
