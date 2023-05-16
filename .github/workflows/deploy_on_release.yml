@@ -79,6 +79,13 @@ jobs:
         # export 를 통해 ipa 파일 만듦
         run: |
           xcodebuild -exportArchive -archivePath $XC_ARCHIVE -exportOptionsPlist ExportOptions.plist -exportPath . -allowProvisioningUpdates
+          
+      - name: Print project directory and files
+        run: |
+          echo "Project directory: $(pwd)"
+          echo "Files in project directory:"
+          ls -al
+          
       - name: Upload app to TestFlight
         uses: apple-actions/upload-testflight-build@v1
         with:
