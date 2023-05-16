@@ -96,6 +96,16 @@ jobs:
           mkdir -p ~/private_keys
           echo -n "$PRIVATE_API_KEY_BASE64" | base64 --decode --output ~/private_keys/AuthKey_$API_KEYAPI_KEY.p8
 
+      - name: Print project directory and files
+        run: |
+          echo "Project directory: $(pwd)"
+          echo "Files in project directory:"
+          ls -al
+          cd ~/private_keys
+          echo "Project directory: $(pwd)"
+          echo "Files in project directory:"
+          ls -al
+
       - name: Upload app to TestFlight
         env:
           API_KEY: ${{ secrets.APPSTORE_API_KEY_ID }}
